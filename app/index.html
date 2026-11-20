@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Cover Studio — GTA-style cover art maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body data-theme="sunset">
+<main class="app">
+  <section class="controls">
+    <h1>Vice Cover Studio</h1>
+    <p class="tagline">Your photos, a caption, and a Vice City sunset — into a poster-style cover, exported as a PNG. Everything runs offline, right here in your browser.</p>
+    <div id="slots"></div>
+    <label>Caption <input id="caption" type="text" maxlength="40" value="Vice Nights"></label>
+    <label>Sub-caption <input id="sub" type="text" maxlength="40" value="Est. 2026"></label>
+    <label>Look
+      <select id="theme"></select>
+    </label>
+    <label>Export size
+      <select id="size"></select>
+    </label>
+    <div class="actions">
+      <button id="demo" type="button">Load demo photos</button>
+      <button id="export" type="button" class="primary">Export PNG 1080 x 1080</button>
+    </div>
+    <p id="status" role="status"></p>
+    <p class="fine">Photos stay on your machine — nothing is uploaded. Artwork, lettering and fonts are original; no game logos or artwork are used.</p>
+  </section>
+  <section class="stage">
+    <canvas id="cover" width="1080" height="1080" aria-label="The cover preview"></canvas>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

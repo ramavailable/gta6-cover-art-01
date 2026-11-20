@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body { margin: 0; min-height: 100%; background: #140a24; color: #f4eefb; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 26px; box-sizing: border-box; }
+.controls { display: flex; flex-direction: column; gap: 14px; width: 320px; flex: none; }
+.controls h1 { margin: 0; font-family: 'Anton', 'Arial Black', sans-serif; font-size: 34px; letter-spacing: 1px; color: #ffd166; }
+.tagline { margin: 0; color: #cdbfe0; }
+.fine { margin: 0; font-size: 12px; color: #8d7fa8; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+input[type=text], select { font: inherit; padding: 9px 10px; border: 1px solid #4a3670; border-radius: 8px; background: #221538; color: #f4eefb; }
+input[type=file] { font: inherit; margin-top: 4px; }
+input[type=range] { width: 100%; accent-color: #ff7a3d; }
+button { font: inherit; font-weight: 700; padding: 10px 12px; border: 0; border-radius: 8px; background: #33234f; color: #fff; cursor: pointer; }
+button:hover { background: #453165; }
+button.primary { background: #ff7a3d; color: #1d0b2e; }
+button.primary:hover { background: #ff9a5c; }
+.actions { display: flex; gap: 10px; }
+.actions button { flex: 1; }
+#status { min-height: 1.2em; margin: 0; color: #2ee6a8; }
+.slot { border: 1px solid #4a3670; border-radius: 10px; padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 10px; }
+.slot legend { font-weight: 700; color: #ffd166; padding: 0 6px; }
+.samples { display: flex; gap: 8px; }
+.samples .sample { flex: 1; padding: 6px 4px; font-size: 13px; background: #221538; border: 1px solid #4a3670; }
+.stage { flex: 1; display: flex; justify-content: center; min-width: 0; }
+canvas { width: min(72vh, 100%); height: auto; aspect-ratio: 1 / 1; background: #2b1838; box-shadow: 0 12px 44px rgba(0, 0, 0, 0.55); }
+body.shot-cover, body.shot-cover html { overflow: hidden; }
+body.shot-cover .controls { display: none; }
+body.shot-cover .app { padding: 0; display: block; }
+body.shot-cover .stage { display: block; }
+body.shot-cover canvas { display: block; width: 100vw; height: 100vh; aspect-ratio: auto; box-shadow: none; }
